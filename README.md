@@ -4,9 +4,9 @@
 [![Insightful Pipe](https://img.shields.io/badge/Insightful_Pipe-MCP_Servers-purple)](https://insightfulpipe.com/mcp-servers)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-> **Connect X Ads (formerly Twitter Ads) to AI assistants for real-time social advertising analytics.**
+> **Connect X Ads (formerly Twitter Ads) to AI assistants to report on campaigns and build them: campaigns, line items, promoted-only posts and cards, with new campaigns starting paused.**
 
-Part of the [Insightful Pipe MCP Server Collection](https://insightfulpipe.com/mcp-servers) — The X Ads MCP server enables Claude, ChatGPT, Cursor, and other AI assistants to analyze your X advertising campaigns. Track promoted tweets, monitor engagement, and get AI-powered recommendations.
+Part of the [Insightful Pipe MCP Server Collection](https://insightfulpipe.com/mcp-servers) — The X Ads MCP server gives Claude, ChatGPT, Cursor and other AI assistants 80 actions (53 read, 27 write) on your X ad accounts. Your assistant can report on campaigns, line items, promoted posts and creatives, then create campaigns, line items, promoted-only ad posts and website, app or carousel cards. New campaigns and line items start paused, ad posts are created promoted-only so they don't appear on your public timeline, and delete actions stay off until an admin turns them on.
 
 [![Explore All MCP Servers](https://img.shields.io/badge/Explore_All-MCP_Servers-blue?style=for-the-badge)](https://insightfulpipe.com/mcp-servers)
 
@@ -231,7 +231,7 @@ You decide what AI agents can do with each connected account:
 ## Why X Ads MCP?
 
 ### For Brand Marketers
-- **Real-time engagement** - Join conversations
+- **Real-time engagement** - Track engagement on promoted posts
 - **Trending topics** - Capitalize on trends
 - **Brand awareness** - Measure reach and engagement
 
