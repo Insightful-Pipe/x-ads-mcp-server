@@ -6,7 +6,9 @@
 
 > **Connect X Ads (formerly Twitter Ads) to AI assistants to report on campaigns and build them: campaigns, line items, promoted-only posts and cards, with new campaigns starting paused.**
 
-Part of the [Insightful Pipe MCP Server Collection](https://insightfulpipe.com/mcp-servers) — The X Ads MCP server gives Claude, ChatGPT, Cursor and other AI assistants 80 actions (53 read, 27 write) on your X ad accounts. Your assistant can report on campaigns, line items, promoted posts and creatives, then create campaigns, line items, promoted-only ad posts and website, app or carousel cards. New campaigns and line items start paused, ad posts are created promoted-only so they don't appear on your public timeline, and delete actions stay off until an admin turns them on.
+Part of the [Insightful Pipe MCP Server Collection](https://insightfulpipe.com/mcp-servers) — The X Ads MCP server gives Claude, ChatGPT, Cursor and other AI assistants 80 actions (52 read and 28 that make changes) on your X ad accounts. Your assistant can report on campaigns, line items, promoted posts and creatives, then create campaigns, line items, promoted-only ad posts and website, app or carousel cards. New campaigns and line items start paused, ad posts are created promoted-only so they don't appear on your public timeline, and delete actions stay off until an admin turns them on.
+
+For your account's own posts, replies, direct messages and post analytics, use the [X Organic MCP server](https://github.com/Insightful-Pipe/x-organic-mcp-server).
 
 [![Explore All MCP Servers](https://img.shields.io/badge/Explore_All-MCP_Servers-blue?style=for-the-badge)](https://insightfulpipe.com/mcp-servers)
 
@@ -33,10 +35,9 @@ X Ads MCP is a **remote Model Context Protocol server** that connects your X Ads
 ### Claude
 
 1. Copy the MCP Server URL: `https://x-ads.insightfulmcp.com/`
-2. Open [Claude Connectors Settings](https://claude.ai/settings/connectors)
-3. Scroll to the bottom and click **Add custom connector**
-4. Paste the URL and click **Add**
-5. Click **Connect** and sign in to InsightfulPipe if asked. Claude then lists the connector as connected.
+2. Open [Claude connector settings](https://claude.ai/settings/connectors) (**Customize > Connectors**), click **+** and then **Add custom connector**
+3. Paste the URL and click **Add**
+4. Click **Connect** and sign in to InsightfulPipe if asked. Claude then lists the connector as connected.
 
 ### ChatGPT
 
@@ -72,16 +73,15 @@ When Cursor shows **Needs authentication**, click **Connect** and sign in to Ins
 
 ## Available Actions
 
-80 actions: 53 read, 27 write.
+80 actions: 52 read and 28 that make changes, 11 of them destructive and off by default.
 
-### Read Actions (53)
+### Read Actions (52)
 
 <details>
-<summary>Show all 53 read actions</summary>
+<summary>Show all 52 read actions</summary>
 
 | Action | Description |
 |--------|-------------|
-| `cancel_async_job` | Cancel a PROCESSING async analytics job |
 | `create_async_job` | Create an async analytics job |
 | `get_account` | Get details for a specific ad account |
 | `get_account_history` | Retrieve a summary of changes made to a specific entity on the account |
@@ -137,13 +137,14 @@ When Cursor shows **Needs authentication**, click **Connect** and sign in to Ins
 
 </details>
 
-### Write Actions (27)
+### Actions That Make Changes (28)
 
 <details>
-<summary>Show all 27 write actions</summary>
+<summary>Show all 28 write and destructive actions</summary>
 
 | Action | Description |
 |--------|-------------|
+| `cancel_async_job` | Cancel a PROCESSING async analytics job |
 | `create_ad_tweet` | Create a promoted-only (nullcast) tweet for use in ad campaigns |
 | `create_campaign` | Create a new campaign (created in PAUSED status for safety) |
 | `create_card` | Create a card (website, app, or carousel) for use in tweets |
